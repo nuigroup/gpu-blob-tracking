@@ -1,0 +1,377 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1238D08C0E135B0E003A0A52 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1238D08A0E135B0E003A0A52 /* GLUT.framework */; };
+		1238D08D0E135B0E003A0A52 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1238D08B0E135B0E003A0A52 /* OpenGL.framework */; };
+		1238D0A70E135B43003A0A52 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1238D0950E135B43003A0A52 /* Camera.cpp */; };
+		1238D0A80E135B43003A0A52 /* FilterChain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1238D0970E135B43003A0A52 /* FilterChain.cpp */; };
+		1238D0A90E135B43003A0A52 /* FilterController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1238D0990E135B43003A0A52 /* FilterController.cpp */; };
+		1238D0AA0E135B43003A0A52 /* gpuTracker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1238D09C0E135B43003A0A52 /* gpuTracker.cpp */; };
+		1238D0AB0E135B43003A0A52 /* ImageFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1238D09D0E135B43003A0A52 /* ImageFilter.cpp */; };
+		1238D0AC0E135B43003A0A52 /* ShaderProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1238D09F0E135B43003A0A52 /* ShaderProgram.cpp */; };
+		1238D0AD0E135B43003A0A52 /* tinystr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1238D0A10E135B43003A0A52 /* tinystr.cpp */; };
+		1238D0AE0E135B43003A0A52 /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1238D0A30E135B43003A0A52 /* tinyxml.cpp */; };
+		1238D0AF0E135B43003A0A52 /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1238D0A50E135B43003A0A52 /* tinyxmlerror.cpp */; };
+		1238D0B00E135B43003A0A52 /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1238D0A60E135B43003A0A52 /* tinyxmlparser.cpp */; };
+		1238D0C30E135BCF003A0A52 /* OpenCV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1238D0C20E135BCF003A0A52 /* OpenCV.framework */; };
+		1238D1090E135BD3003A0A52 /* OpenCV.framework in Copy Private Frameworks */ = {isa = PBXBuildFile; fileRef = 1238D0C20E135BCF003A0A52 /* OpenCV.framework */; };
+		1238D10A0E135BDA003A0A52 /* blobDetector.fs in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 1238D0B50E135B5F003A0A52 /* blobDetector.fs */; };
+		1238D10B0E135BDA003A0A52 /* contrast.fs in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 1238D0B60E135B5F003A0A52 /* contrast.fs */; };
+		1238D10C0E135BDA003A0A52 /* gaussH.fs in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 1238D0B70E135B5F003A0A52 /* gaussH.fs */; };
+		1238D10D0E135BDA003A0A52 /* gaussV.fs in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 1238D0B80E135B5F003A0A52 /* gaussV.fs */; };
+		1238D10E0E135BDA003A0A52 /* inverse.fs in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 1238D0B90E135B5F003A0A52 /* inverse.fs */; };
+		1238D10F0E135BDA003A0A52 /* minimal.vs in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 1238D0BA0E135B5F003A0A52 /* minimal.vs */; };
+		1238D1100E135BDA003A0A52 /* threshold.fs in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 1238D0BB0E135B5F003A0A52 /* threshold.fs */; };
+		1238D1110E135BDF003A0A52 /* contrast.xml in Copy Fiters */ = {isa = PBXBuildFile; fileRef = 1238D0B10E135B52003A0A52 /* contrast.xml */; };
+		1238D1120E135BDF003A0A52 /* gauss.xml in Copy Fiters */ = {isa = PBXBuildFile; fileRef = 1238D0B20E135B52003A0A52 /* gauss.xml */; };
+		1238D1130E135BDF003A0A52 /* gaussV.xml in Copy Fiters */ = {isa = PBXBuildFile; fileRef = 1238D0B30E135B52003A0A52 /* gaussV.xml */; };
+		1238D1140E135BDF003A0A52 /* threshold.xml in Copy Fiters */ = {isa = PBXBuildFile; fileRef = 1238D0B40E135B52003A0A52 /* threshold.xml */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1238D0BF0E135BC1003A0A52 /* Copy Fiters */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = filters;
+			dstSubfolderSpec = 7;
+			files = (
+				1238D1110E135BDF003A0A52 /* contrast.xml in Copy Fiters */,
+				1238D1120E135BDF003A0A52 /* gauss.xml in Copy Fiters */,
+				1238D1130E135BDF003A0A52 /* gaussV.xml in Copy Fiters */,
+				1238D1140E135BDF003A0A52 /* threshold.xml in Copy Fiters */,
+			);
+			name = "Copy Fiters";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1238D0C00E135BC1003A0A52 /* Copy Shaders */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = shaders;
+			dstSubfolderSpec = 7;
+			files = (
+				1238D10A0E135BDA003A0A52 /* blobDetector.fs in Copy Shaders */,
+				1238D10B0E135BDA003A0A52 /* contrast.fs in Copy Shaders */,
+				1238D10C0E135BDA003A0A52 /* gaussH.fs in Copy Shaders */,
+				1238D10D0E135BDA003A0A52 /* gaussV.fs in Copy Shaders */,
+				1238D10E0E135BDA003A0A52 /* inverse.fs in Copy Shaders */,
+				1238D10F0E135BDA003A0A52 /* minimal.vs in Copy Shaders */,
+				1238D1100E135BDA003A0A52 /* threshold.fs in Copy Shaders */,
+			);
+			name = "Copy Shaders";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1238D0C10E135BC1003A0A52 /* Copy Private Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1238D1090E135BD3003A0A52 /* OpenCV.framework in Copy Private Frameworks */,
+			);
+			name = "Copy Private Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1238D07F0E135AAA003A0A52 /* gpuTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gpuTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1238D0820E135AAA003A0A52 /* gpuTracker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "gpuTracker-Info.plist"; sourceTree = "<group>"; };
+		1238D08A0E135B0E003A0A52 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		1238D08B0E135B0E003A0A52 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		1238D0950E135B43003A0A52 /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Camera.cpp; path = ../../src/Camera.cpp; sourceTree = SOURCE_ROOT; };
+		1238D0960E135B43003A0A52 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Camera.h; path = ../../src/Camera.h; sourceTree = SOURCE_ROOT; };
+		1238D0970E135B43003A0A52 /* FilterChain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FilterChain.cpp; path = ../../src/FilterChain.cpp; sourceTree = SOURCE_ROOT; };
+		1238D0980E135B43003A0A52 /* FilterChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilterChain.h; path = ../../src/FilterChain.h; sourceTree = SOURCE_ROOT; };
+		1238D0990E135B43003A0A52 /* FilterController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FilterController.cpp; path = ../../src/FilterController.cpp; sourceTree = SOURCE_ROOT; };
+		1238D09A0E135B43003A0A52 /* FilterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilterController.h; path = ../../src/FilterController.h; sourceTree = SOURCE_ROOT; };
+		1238D09B0E135B43003A0A52 /* gl_includes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gl_includes.h; path = ../../src/gl_includes.h; sourceTree = SOURCE_ROOT; };
+		1238D09C0E135B43003A0A52 /* gpuTracker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = gpuTracker.cpp; path = ../../src/gpuTracker.cpp; sourceTree = SOURCE_ROOT; };
+		1238D09D0E135B43003A0A52 /* ImageFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ImageFilter.cpp; path = ../../src/ImageFilter.cpp; sourceTree = SOURCE_ROOT; };
+		1238D09E0E135B43003A0A52 /* ImageFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageFilter.h; path = ../../src/ImageFilter.h; sourceTree = SOURCE_ROOT; };
+		1238D09F0E135B43003A0A52 /* ShaderProgram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShaderProgram.cpp; path = ../../src/ShaderProgram.cpp; sourceTree = SOURCE_ROOT; };
+		1238D0A00E135B43003A0A52 /* ShaderProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShaderProgram.h; path = ../../src/ShaderProgram.h; sourceTree = SOURCE_ROOT; };
+		1238D0A10E135B43003A0A52 /* tinystr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tinystr.cpp; path = ../../src/tinystr.cpp; sourceTree = SOURCE_ROOT; };
+		1238D0A20E135B43003A0A52 /* tinystr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tinystr.h; path = ../../src/tinystr.h; sourceTree = SOURCE_ROOT; };
+		1238D0A30E135B43003A0A52 /* tinyxml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tinyxml.cpp; path = ../../src/tinyxml.cpp; sourceTree = SOURCE_ROOT; };
+		1238D0A40E135B43003A0A52 /* tinyxml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tinyxml.h; path = ../../src/tinyxml.h; sourceTree = SOURCE_ROOT; };
+		1238D0A50E135B43003A0A52 /* tinyxmlerror.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tinyxmlerror.cpp; path = ../../src/tinyxmlerror.cpp; sourceTree = SOURCE_ROOT; };
+		1238D0A60E135B43003A0A52 /* tinyxmlparser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tinyxmlparser.cpp; path = ../../src/tinyxmlparser.cpp; sourceTree = SOURCE_ROOT; };
+		1238D0B10E135B52003A0A52 /* contrast.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = contrast.xml; path = ../../filters/contrast.xml; sourceTree = SOURCE_ROOT; };
+		1238D0B20E135B52003A0A52 /* gauss.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = gauss.xml; path = ../../filters/gauss.xml; sourceTree = SOURCE_ROOT; };
+		1238D0B30E135B52003A0A52 /* gaussV.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = gaussV.xml; path = ../../filters/gaussV.xml; sourceTree = SOURCE_ROOT; };
+		1238D0B40E135B52003A0A52 /* threshold.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = threshold.xml; path = ../../filters/threshold.xml; sourceTree = SOURCE_ROOT; };
+		1238D0B50E135B5F003A0A52 /* blobDetector.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = blobDetector.fs; path = ../../shaders/blobDetector.fs; sourceTree = SOURCE_ROOT; };
+		1238D0B60E135B5F003A0A52 /* contrast.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = contrast.fs; path = ../../shaders/contrast.fs; sourceTree = SOURCE_ROOT; };
+		1238D0B70E135B5F003A0A52 /* gaussH.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = gaussH.fs; path = ../../shaders/gaussH.fs; sourceTree = SOURCE_ROOT; };
+		1238D0B80E135B5F003A0A52 /* gaussV.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = gaussV.fs; path = ../../shaders/gaussV.fs; sourceTree = SOURCE_ROOT; };
+		1238D0B90E135B5F003A0A52 /* inverse.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = inverse.fs; path = ../../shaders/inverse.fs; sourceTree = SOURCE_ROOT; };
+		1238D0BA0E135B5F003A0A52 /* minimal.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = minimal.vs; path = ../../shaders/minimal.vs; sourceTree = SOURCE_ROOT; };
+		1238D0BB0E135B5F003A0A52 /* threshold.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = threshold.fs; path = ../../shaders/threshold.fs; sourceTree = SOURCE_ROOT; };
+		1238D0C20E135BCF003A0A52 /* OpenCV.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenCV.framework; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1238D07D0E135AAA003A0A52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1238D08C0E135B0E003A0A52 /* GLUT.framework in Frameworks */,
+				1238D08D0E135B0E003A0A52 /* OpenGL.framework in Frameworks */,
+				1238D0C30E135BCF003A0A52 /* OpenCV.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1238D06D0E135A62003A0A52 = {
+			isa = PBXGroup;
+			children = (
+				1238D0940E135B31003A0A52 /* Source */,
+				1238D0930E135B2D003A0A52 /* Filters */,
+				1238D0920E135B27003A0A52 /* Shaders */,
+				1238D0890E135AEB003A0A52 /* Frameworks */,
+				1238D0800E135AAA003A0A52 /* Products */,
+				1238D0820E135AAA003A0A52 /* gpuTracker-Info.plist */,
+			);
+			sourceTree = "<group>";
+		};
+		1238D0800E135AAA003A0A52 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1238D07F0E135AAA003A0A52 /* gpuTracker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1238D0890E135AEB003A0A52 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1238D0C20E135BCF003A0A52 /* OpenCV.framework */,
+				1238D08A0E135B0E003A0A52 /* GLUT.framework */,
+				1238D08B0E135B0E003A0A52 /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1238D0920E135B27003A0A52 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				1238D0B50E135B5F003A0A52 /* blobDetector.fs */,
+				1238D0B60E135B5F003A0A52 /* contrast.fs */,
+				1238D0B70E135B5F003A0A52 /* gaussH.fs */,
+				1238D0B80E135B5F003A0A52 /* gaussV.fs */,
+				1238D0B90E135B5F003A0A52 /* inverse.fs */,
+				1238D0BA0E135B5F003A0A52 /* minimal.vs */,
+				1238D0BB0E135B5F003A0A52 /* threshold.fs */,
+			);
+			name = Shaders;
+			sourceTree = "<group>";
+		};
+		1238D0930E135B2D003A0A52 /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				1238D0B10E135B52003A0A52 /* contrast.xml */,
+				1238D0B20E135B52003A0A52 /* gauss.xml */,
+				1238D0B30E135B52003A0A52 /* gaussV.xml */,
+				1238D0B40E135B52003A0A52 /* threshold.xml */,
+			);
+			name = Filters;
+			sourceTree = "<group>";
+		};
+		1238D0940E135B31003A0A52 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				1238D0950E135B43003A0A52 /* Camera.cpp */,
+				1238D0960E135B43003A0A52 /* Camera.h */,
+				1238D0970E135B43003A0A52 /* FilterChain.cpp */,
+				1238D0980E135B43003A0A52 /* FilterChain.h */,
+				1238D0990E135B43003A0A52 /* FilterController.cpp */,
+				1238D09A0E135B43003A0A52 /* FilterController.h */,
+				1238D09B0E135B43003A0A52 /* gl_includes.h */,
+				1238D09C0E135B43003A0A52 /* gpuTracker.cpp */,
+				1238D09D0E135B43003A0A52 /* ImageFilter.cpp */,
+				1238D09E0E135B43003A0A52 /* ImageFilter.h */,
+				1238D09F0E135B43003A0A52 /* ShaderProgram.cpp */,
+				1238D0A00E135B43003A0A52 /* ShaderProgram.h */,
+				1238D0A10E135B43003A0A52 /* tinystr.cpp */,
+				1238D0A20E135B43003A0A52 /* tinystr.h */,
+				1238D0A30E135B43003A0A52 /* tinyxml.cpp */,
+				1238D0A40E135B43003A0A52 /* tinyxml.h */,
+				1238D0A50E135B43003A0A52 /* tinyxmlerror.cpp */,
+				1238D0A60E135B43003A0A52 /* tinyxmlparser.cpp */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1238D07E0E135AAA003A0A52 /* gpuTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1238D0850E135AAA003A0A52 /* Build configuration list for PBXNativeTarget "gpuTracker" */;
+			buildPhases = (
+				1238D07B0E135AAA003A0A52 /* Resources */,
+				1238D07C0E135AAA003A0A52 /* Sources */,
+				1238D07D0E135AAA003A0A52 /* Frameworks */,
+				1238D0BF0E135BC1003A0A52 /* Copy Fiters */,
+				1238D0C00E135BC1003A0A52 /* Copy Shaders */,
+				1238D0C10E135BC1003A0A52 /* Copy Private Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = gpuTracker;
+			productName = gpuTracker;
+			productReference = 1238D07F0E135AAA003A0A52 /* gpuTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1238D06F0E135A62003A0A52 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1238D0720E135A62003A0A52 /* Build configuration list for PBXProject "gpuTracker" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 0;
+			mainGroup = 1238D06D0E135A62003A0A52;
+			productRefGroup = 1238D0800E135AAA003A0A52 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1238D07E0E135AAA003A0A52 /* gpuTracker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1238D07B0E135AAA003A0A52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1238D07C0E135AAA003A0A52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1238D0A70E135B43003A0A52 /* Camera.cpp in Sources */,
+				1238D0A80E135B43003A0A52 /* FilterChain.cpp in Sources */,
+				1238D0A90E135B43003A0A52 /* FilterController.cpp in Sources */,
+				1238D0AA0E135B43003A0A52 /* gpuTracker.cpp in Sources */,
+				1238D0AB0E135B43003A0A52 /* ImageFilter.cpp in Sources */,
+				1238D0AC0E135B43003A0A52 /* ShaderProgram.cpp in Sources */,
+				1238D0AD0E135B43003A0A52 /* tinystr.cpp in Sources */,
+				1238D0AE0E135B43003A0A52 /* tinyxml.cpp in Sources */,
+				1238D0AF0E135B43003A0A52 /* tinyxmlerror.cpp in Sources */,
+				1238D0B00E135B43003A0A52 /* tinyxmlparser.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1238D0700E135A62003A0A52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		1238D0710E135A62003A0A52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+			};
+			name = Release;
+		};
+		1238D0830E135AAA003A0A52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
+				INFOPLIST_FILE = "gpuTracker-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Carbon,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = gpuTracker;
+			};
+			name = Debug;
+		};
+		1238D0840E135AAA003A0A52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)\"";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
+				INFOPLIST_FILE = "gpuTracker-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Carbon,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = gpuTracker;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1238D0720E135A62003A0A52 /* Build configuration list for PBXProject "gpuTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1238D0700E135A62003A0A52 /* Debug */,
+				1238D0710E135A62003A0A52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1238D0850E135AAA003A0A52 /* Build configuration list for PBXNativeTarget "gpuTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1238D0830E135AAA003A0A52 /* Debug */,
+				1238D0840E135AAA003A0A52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1238D06F0E135A62003A0A52 /* Project object */;
+}

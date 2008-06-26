@@ -1,6 +1,6 @@
 #include "gl_includes.h"
 #include <stdio.h>
-#include <highgui.h>
+
 #include "Camera.h"
 #include "FilterChain.h"
 #include "FilterController.h"
@@ -96,11 +96,13 @@ int main(int argc, char **argv) {
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA);
 	glutInitWindowPosition(100,100);
-	glutInitWindowSize(cam->getFrameWidth(), cam->getFrameHeight());
+	glutInitWindowSize(640,480);
 	glutCreateWindow("gpuTracker");
 	glutDisplayFunc(renderScene);
 	glutSpecialFunc(specialKeyPress);
 	
+	
+#ifndef __APPLE_CC__ //on osx we dont need glew
 	//initalize GLEW
 	GLenum err = glewInit();
 	if (GLEW_OK != err)
@@ -109,17 +111,17 @@ int main(int argc, char **argv) {
   		fprintf(stderr, "Error: %s\n", glewGetErrorString(err));
 	}
 	fprintf(stdout, "Status: Using GLEW %s\n", glewGetString(GLEW_VERSION));
-	
+#endif
 	
 	
 	//initialize tracking stuff
 	glGenTextures(1, &videoTexture);
 	filterChain = new FilterChain();
 	
-	filterChain->attachNewFilter("filters/gauss.xml", cam->getFrameWidth(), cam->getFrameHeight());
-	filterChain->attachNewFilter("filters/gaussV.xml", cam->getFrameWidth(), cam->getFrameHeight());
-	filterChain->attachNewFilter("filters/contrast.xml", cam->getFrameWidth(), cam->getFrameHeight());
-	filterChain->attachNewFilter("filters/threshold.xml", cam->getFrameWidth(), cam->getFrameHeight());
+	filterChain->attachNewFilter("filters/gauss.xml", 640,480);
+	filterChain->attachNewFilter("filters/gaussV.xml", 640,480);
+	filterChain->attachNewFilter("filters/contrast.xml", 640,480);
+	filterChain->attachNewFilter("filters/threshold.xml", 640,480);
 	
 	int currentFilter = 0;
 	fController = new FilterController(filterChain->getFilter(currentFilter));

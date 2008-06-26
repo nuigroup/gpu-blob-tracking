@@ -7,7 +7,7 @@
 
 
 Camera::Camera(CameraType camType){
-   this->capture = cvCaptureFromCAM(camType);
+   this->capture = cvCaptureFromCAM(0);
    if( !this->capture ){
       printf("Error: Could not initialize Camera.\n");
    	  exit(1);

@@ -1,0 +1,340 @@
+// !$*UTF8*$!
+{
+	1238D06F0E135A62003A0A52 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 1238D0810E135AAA003A0A52 /* gpuTracker */;
+		activeTarget = 1238D07E0E135AAA003A0A52 /* gpuTracker */;
+		addToTargets = (
+			1238D07E0E135AAA003A0A52 /* gpuTracker */,
+		);
+		codeSenseManager = 1238D0740E135A62003A0A52 /* Code sense */;
+		executables = (
+			1238D0810E135AAA003A0A52 /* gpuTracker */,
+		);
+		ignoreBreakpointsInProjectsDict = {
+		};
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					341,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					301,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 236149766;
+			PBXWorkspaceStateSaveDate = 236149766;
+		};
+		perUserProjectItems = {
+			1238D1150E135BE8003A0A52 = 1238D1150E135BE8003A0A52 /* PlistBookmark */;
+			1238D1160E135BE8003A0A52 = 1238D1160E135BE8003A0A52 /* PBXTextBookmark */;
+			1238D1170E135BE8003A0A52 = 1238D1170E135BE8003A0A52 /* PBXTextBookmark */;
+			1238D1180E135BE8003A0A52 = 1238D1180E135BE8003A0A52 /* PBXTextBookmark */;
+			1238D1190E135BE8003A0A52 = 1238D1190E135BE8003A0A52 /* PlistBookmark */;
+			1238D11A0E135BE8003A0A52 = 1238D11A0E135BE8003A0A52 /* PBXTextBookmark */;
+			1238D11B0E135BE8003A0A52 = 1238D11B0E135BE8003A0A52 /* PBXTextBookmark */;
+			1238D11D0E135BF1003A0A52 = 1238D11D0E135BF1003A0A52 /* PBXTextBookmark */;
+			1238D12D0E135CC3003A0A52 /* PBXTextBookmark */ = 1238D12D0E135CC3003A0A52 /* PBXTextBookmark */;
+			1238D12E0E135CC3003A0A52 /* PBXTextBookmark */ = 1238D12E0E135CC3003A0A52 /* PBXTextBookmark */;
+			1238D12F0E135CC3003A0A52 /* PBXTextBookmark */ = 1238D12F0E135CC3003A0A52 /* PBXTextBookmark */;
+			1238D1300E135CC3003A0A52 /* PBXTextBookmark */ = 1238D1300E135CC3003A0A52 /* PBXTextBookmark */;
+			1238D1410E135CE8003A0A52 /* PBXTextBookmark */ = 1238D1410E135CE8003A0A52 /* PBXTextBookmark */;
+			1238D1420E135CE8003A0A52 /* PBXTextBookmark */ = 1238D1420E135CE8003A0A52 /* PBXTextBookmark */;
+			1238D1430E135CE8003A0A52 /* PBXTextBookmark */ = 1238D1430E135CE8003A0A52 /* PBXTextBookmark */;
+			1238D1440E135CE8003A0A52 /* PBXTextBookmark */ = 1238D1440E135CE8003A0A52 /* PBXTextBookmark */;
+		};
+		sourceControlManager = 1238D0730E135A62003A0A52 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	1238D0730E135A62003A0A52 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	1238D0740E135A62003A0A52 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	1238D07E0E135AAA003A0A52 /* gpuTracker */ = {
+		activeExec = 0;
+		executables = (
+			1238D0810E135AAA003A0A52 /* gpuTracker */,
+		);
+	};
+	1238D0810E135AAA003A0A52 /* gpuTracker */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = gpuTracker;
+		sourceDirectories = (
+		);
+	};
+	1238D0950E135B43003A0A52 /* Camera.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {540, 931}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 287}";
+			sepNavWindowFrame = "{{107, 96}, {1269, 694}}";
+		};
+	};
+	1238D0960E135B43003A0A52 /* Camera.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1210, 760}}";
+			sepNavSelRange = "{102, 0}";
+			sepNavVisRange = "{141, 674}";
+			sepNavWindowFrame = "{{61, 137}, {1269, 694}}";
+		};
+	};
+	1238D09B0E135B43003A0A52 /* gl_includes.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {519, 230}}";
+			sepNavSelRange = "{75, 21}";
+			sepNavVisRange = "{0, 145}";
+			sepNavWindowFrame = "{{38, 158}, {1269, 694}}";
+		};
+	};
+	1238D09C0E135B43003A0A52 /* gpuTracker.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1210, 2660}}";
+			sepNavSelRange = "{1889, 31}";
+			sepNavVisRange = "{1823, 552}";
+			sepNavWindowFrame = "{{84, 116}, {1269, 694}}";
+		};
+	};
+	1238D0B30E135B52003A0A52 /* gaussV.xml */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {692, 253}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 278}";
+		};
+	};
+	1238D0B60E135B5F003A0A52 /* contrast.fs */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {519, 253}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 223}";
+		};
+	};
+	1238D0B80E135B5F003A0A52 /* gaussV.fs */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {519, 532}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 270}";
+		};
+	};
+	1238D1150E135BE8003A0A52 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 1238D0820E135AAA003A0A52 /* gpuTracker-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/tehansen/tmp/gputracker/osx/gpuTracker/gpuTracker-Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	1238D1160E135BE8003A0A52 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1238D0B80E135B5F003A0A52 /* gaussV.fs */;
+		name = "gaussV.fs: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 270;
+		vrLoc = 0;
+	};
+	1238D1170E135BE8003A0A52 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1238D0B60E135B5F003A0A52 /* contrast.fs */;
+		name = "contrast.fs: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 223;
+		vrLoc = 0;
+	};
+	1238D1180E135BE8003A0A52 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1238D0B30E135B52003A0A52 /* gaussV.xml */;
+		name = "gaussV.xml: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 278;
+		vrLoc = 0;
+	};
+	1238D1190E135BE8003A0A52 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 1238D0820E135AAA003A0A52 /* gpuTracker-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/tehansen/tmp/gputracker/osx/gpuTracker/gpuTracker-Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	1238D11A0E135BE8003A0A52 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1238D0B80E135B5F003A0A52 /* gaussV.fs */;
+		name = "gaussV.fs: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 270;
+		vrLoc = 0;
+	};
+	1238D11B0E135BE8003A0A52 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1238D0B60E135B5F003A0A52 /* contrast.fs */;
+		name = "contrast.fs: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 223;
+		vrLoc = 0;
+	};
+	1238D11D0E135BF1003A0A52 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1238D0B30E135B52003A0A52 /* gaussV.xml */;
+		name = "gaussV.xml: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 278;
+		vrLoc = 0;
+	};
+	1238D12D0E135CC3003A0A52 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1238D0B30E135B52003A0A52 /* gaussV.xml */;
+		name = "gaussV.xml: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 278;
+		vrLoc = 0;
+	};
+	1238D12E0E135CC3003A0A52 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: GL/glew.h: No such file or directory";
+		fRef = 1238D09B0E135B43003A0A52 /* gl_includes.h */;
+		rLen = 1;
+		rLoc = 0;
+		rType = 1;
+	};
+	1238D12F0E135CC3003A0A52 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1238D0B30E135B52003A0A52 /* gaussV.xml */;
+		name = "gaussV.xml: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 278;
+		vrLoc = 0;
+	};
+	1238D1300E135CC3003A0A52 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1238D09B0E135B43003A0A52 /* gl_includes.h */;
+		name = "gl_includes.h: 5";
+		rLen = 21;
+		rLoc = 75;
+		rType = 0;
+		vrLen = 145;
+		vrLoc = 0;
+	};
+	1238D1410E135CE8003A0A52 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1238D09B0E135B43003A0A52 /* gl_includes.h */;
+		name = "gl_includes.h: 5";
+		rLen = 21;
+		rLoc = 75;
+		rType = 0;
+		vrLen = 145;
+		vrLoc = 0;
+	};
+	1238D1420E135CE8003A0A52 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1238D0950E135B43003A0A52 /* Camera.cpp */;
+		name = "Camera.cpp: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 288;
+		vrLoc = 0;
+	};
+	1238D1430E135CE8003A0A52 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1238D09B0E135B43003A0A52 /* gl_includes.h */;
+		name = "gl_includes.h: 5";
+		rLen = 21;
+		rLoc = 75;
+		rType = 0;
+		vrLen = 145;
+		vrLoc = 0;
+	};
+	1238D1440E135CE8003A0A52 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1238D0950E135B43003A0A52 /* Camera.cpp */;
+		name = "Camera.cpp: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 287;
+		vrLoc = 0;
+	};
+}
