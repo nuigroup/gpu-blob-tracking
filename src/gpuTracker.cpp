@@ -118,10 +118,12 @@ int main(int argc, char **argv) {
 	glGenTextures(1, &videoTexture);
 	filterChain = new FilterChain();
 	
+
+	filterChain->attachNewFilter("filters/contrast.xml", 640,480);
 	filterChain->attachNewFilter("filters/gauss.xml", 640,480);
 	filterChain->attachNewFilter("filters/gaussV.xml", 640,480);
-	filterChain->attachNewFilter("filters/contrast.xml", 640,480);
 	filterChain->attachNewFilter("filters/threshold.xml", 640,480);
+
 	
 	int currentFilter = 0;
 	fController = new FilterController(filterChain->getFilter(currentFilter));
