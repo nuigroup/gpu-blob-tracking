@@ -9,6 +9,10 @@
 #else
 	#include <highgui.h>
 #endif
+
+
+
+
 //i cant find docuimentation for openCV about what number is what camera.
 //these numbers corrospond to what happens on my system, i will add
 //support for other camera drivers (dc1394, dsVideoLib(Win32) cmu driver etc. later)

@@ -9,6 +9,7 @@ class FilterChain
 	
 private:
 	std::vector<ImageFilter*> filters; 
+	std::vector<int> test; 
 	
 	
 	

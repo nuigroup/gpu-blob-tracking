@@ -1,5 +1,6 @@
-#include "Camera.h"
 #include <stdio.h>
+#include "Camera.h"
+
 
 
 #define IsBGR(s) ((s[0] == 'B') && (s[1] == 'G') && (s[2] == 'R'))

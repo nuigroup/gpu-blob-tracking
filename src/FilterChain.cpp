@@ -16,7 +16,8 @@ void FilterChain::attachFilter(ImageFilter* f)
 
 void FilterChain::attachNewFilter(const char* fname, int sx, int sy)
 {
-	filters.push_back ( new ImageFilter(fname, sx,sy ) );
+	ImageFilter* f =  new ImageFilter(fname, sx,sy );
+	filters.push_back (f);
 
 }
 

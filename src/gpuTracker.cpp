@@ -86,10 +86,8 @@ void specialKeyPress(int key, int x, int y){
 
 int main(int argc, char **argv) {
 	
-
 	//initialize camera
 	cam = new Camera(USB_CAMERA);
-
 
 
 	//initialize GLUT
