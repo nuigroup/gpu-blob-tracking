@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12200FFD0E32D20D00BC7B2F /* blobExtractor.xml in Resources */ = {isa = PBXBuildFile; fileRef = 12200FFC0E32D20D00BC7B2F /* blobExtractor.xml */; };
+		122010140E32D2DF00BC7B2F /* blobExtractor.xml in Copy Fiters */ = {isa = PBXBuildFile; fileRef = 12200FFC0E32D20D00BC7B2F /* blobExtractor.xml */; };
+		1220104D0E32D38800BC7B2F /* blobExtractor.gs in Resources */ = {isa = PBXBuildFile; fileRef = 1220104C0E32D38800BC7B2F /* blobExtractor.gs */; };
+		1220109F0E32D4CC00BC7B2F /* blobExtractor.gs in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 1220104C0E32D38800BC7B2F /* blobExtractor.gs */; };
 		1238D08C0E135B0E003A0A52 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1238D08A0E135B0E003A0A52 /* GLUT.framework */; };
 		1238D08D0E135B0E003A0A52 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1238D08B0E135B0E003A0A52 /* OpenGL.framework */; };
 		1238D0A70E135B43003A0A52 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1238D0950E135B43003A0A52 /* Camera.cpp */; };
@@ -41,6 +45,7 @@
 			dstPath = filters;
 			dstSubfolderSpec = 7;
 			files = (
+				122010140E32D2DF00BC7B2F /* blobExtractor.xml in Copy Fiters */,
 				1238D1110E135BDF003A0A52 /* contrast.xml in Copy Fiters */,
 				1238D1120E135BDF003A0A52 /* gauss.xml in Copy Fiters */,
 				1238D1130E135BDF003A0A52 /* gaussV.xml in Copy Fiters */,
@@ -55,6 +60,7 @@
 			dstPath = shaders;
 			dstSubfolderSpec = 7;
 			files = (
+				1220109F0E32D4CC00BC7B2F /* blobExtractor.gs in Copy Shaders */,
 				1238D10A0E135BDA003A0A52 /* blobDetector.fs in Copy Shaders */,
 				1238D10B0E135BDA003A0A52 /* contrast.fs in Copy Shaders */,
 				1238D10C0E135BDA003A0A52 /* gaussH.fs in Copy Shaders */,
@@ -80,6 +86,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		12200FFC0E32D20D00BC7B2F /* blobExtractor.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = blobExtractor.xml; path = ../../filters/blobExtractor.xml; sourceTree = SOURCE_ROOT; };
+		1220104C0E32D38800BC7B2F /* blobExtractor.gs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = blobExtractor.gs; path = ../../shaders/blobExtractor.gs; sourceTree = SOURCE_ROOT; };
 		1238D07F0E135AAA003A0A52 /* gpuTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gpuTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1238D0820E135AAA003A0A52 /* gpuTracker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "gpuTracker-Info.plist"; sourceTree = "<group>"; };
 		1238D08A0E135B0E003A0A52 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
@@ -163,6 +171,7 @@
 		1238D0920E135B27003A0A52 /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
+				1220104C0E32D38800BC7B2F /* blobExtractor.gs */,
 				1238D0B50E135B5F003A0A52 /* blobDetector.fs */,
 				1238D0B60E135B5F003A0A52 /* contrast.fs */,
 				1238D0B70E135B5F003A0A52 /* gaussH.fs */,
@@ -177,6 +186,7 @@
 		1238D0930E135B2D003A0A52 /* Filters */ = {
 			isa = PBXGroup;
 			children = (
+				12200FFC0E32D20D00BC7B2F /* blobExtractor.xml */,
 				1238D0B10E135B52003A0A52 /* contrast.xml */,
 				1238D0B20E135B52003A0A52 /* gauss.xml */,
 				1238D0B30E135B52003A0A52 /* gaussV.xml */,
@@ -256,6 +266,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12200FFD0E32D20D00BC7B2F /* blobExtractor.xml in Resources */,
+				1220104D0E32D38800BC7B2F /* blobExtractor.gs in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

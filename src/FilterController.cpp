@@ -103,16 +103,29 @@ void FilterController::draw(){
 }
 
 
-
+//currentParameter is a iterator to a map<str, FilterParameter*>  FilterParameter is defined in ImageFilter.h
 void FilterController::increaseCurrentParameter(){
-	if(currentParameter->second->value < currentParameter->second->max) 
-		currentParameter->second->value += 0.05;
+	const char* n = currentParameter->first.c_str();
+	int t = currentParameter->second->type;
+	if (t==0){//int
+		currentParameter->second->value += 1.0;
+	}
+	if (t==1){//float
+		if(currentParameter->second->value < currentParameter->second->max) 
+			currentParameter->second->value += 0.05;
+	}
 }
 
 
 void FilterController::decreaseCurrentParameter(){
-	if(currentParameter->second->value > currentParameter->second->min) 
-		currentParameter->second->value -= 0.05;
+		int t = currentParameter->second->type;
+	if (t==0){//int
+		currentParameter->second->value -= 1.0;
+	}
+	if (t==1){//float
+		if(currentParameter->second->value < currentParameter->second->max) 
+			currentParameter->second->value -= 0.05;
+	}
 }
 
 

@@ -47,9 +47,8 @@ void main()
 	//adjust brightness and convert to grayscale
 	float p = 0.3 *color.g + 0.59*color.r + 0.11*color.b;
 	p = p * Brightness;
-
-	//adjust contrast
-	color = Invert > 0.0 ? mix(1.0, vec4(p), vec4(Contrast) ) :  vec4(1.0) - mix(1.0, vec4(p), vec4(Contrast));
+	color = vec4(p,p,p,1.0);
+	color = mix( vec4(1.0,1.0,1.0,1.0),color,Contrast);
 	
-	gl_FragColor = color;
+	gl_FragColor =  vec4(color.r , color.g, color.b, 1.0);
 }

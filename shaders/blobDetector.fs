@@ -11,7 +11,7 @@ void main()
 	float numPixelsU = 1.0;
 	float numPixelsD = 1.0;
  
-	int maxSize = 20;
+	int maxSize = 200;
 	for (int i=1; i<maxSize && weight > 0.0; i++){
 		vec2 currentOffset = float(i)*vec2(1.0, 0.0)* offset;
 		weight = (texture2D(tex, gl_TexCoord[0].xy + currentOffset).r > 0.5 ? 1.0 : 0.0) * weight ; 
@@ -68,8 +68,8 @@ void main()
 
 	if(numPixelsL > 5.0){
 		float centerL = abs(numPixelsU - numPixelsD) < 2.0 ? 1.0 : 0.0;
-		float centerR =  abs(numPixelsL - numPixelsR) < 2.0 ? centerL : 0.0;
-		gl_FragColor = vec4(centerR, centerR , 0.0, 1.0);
+		float centerR =  abs(numPixelsL - numPixelsR) < 2.0 ? 1.0 : 0.0;
+		gl_FragColor = vec4(centerR, centerL , 0.0, 1.0);
 	}
 	else
 		gl_FragColor = vec4(0.0,0.0,0.0,1.0);

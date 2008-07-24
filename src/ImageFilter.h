@@ -12,11 +12,16 @@
 class FilterParameter{
 public:
 	const char* name;
+	int type;
 	float value;
 	float max;
 	float min;
 	
-	inline FilterParameter(const char* name, float val, float minVal, float maxVal) { this->name=name; value=val; min=minVal; max=maxVal;  };
+	
+	inline FilterParameter(const char* n, float val, float minVal, float maxVal, int t) { 
+	this->name=n; this->value=val; this->min=minVal; this->max=maxVal; this->type=t;  
+	
+	};
 
 };
 
@@ -25,15 +30,14 @@ public:
 class ImageFilter		
 {
 	private:
-		//should maybe go wih image..bu for now we are onlt passing gl texture handles...
+		//should maybe go wih image..but for now we are only passing gl texture handles...
 		int res_x, res_y;
-	
+		bool useGeometryShader;
 		ShaderProgram* shader;
 		GLuint output_buffer;
 		//GLuint output_texture;
 		
 		const char* name;
-		
 		
 		void parseXML(const char* fname);
 	

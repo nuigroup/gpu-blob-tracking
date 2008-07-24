@@ -47,12 +47,16 @@ void getFrameBufferForTexture(GLuint* fbo, GLuint* tex, int sizeX, int sizeY){
 //reads the filter description file and creates a filter based on the shaders and parameters given in that file
 //allocates output buffer/texture
 ImageFilter::ImageFilter(const char* fname, int sx, int sy){
+	
+	
 	res_x = sx; res_y = sy;
+	useGeometryShader =false;
 	//this->shader = shaderProg;
 	glGenTextures(1, &output_texture );
 	getFrameBufferForTexture(&output_buffer, &output_texture, res_x, res_y);
-	
 	this->parseXML(fname);
+	
+	//TODO: make this varible
 
 	
 
@@ -73,6 +77,7 @@ void ImageFilter::parseXML(const char* fname){
 	TiXmlElement* root_node = doc.RootElement();
 	
 	this->name = root_node->Attribute("name");
+
 	printf("Filter Name:%s\n", this->name);
 	
 	
@@ -84,6 +89,9 @@ void ImageFilter::parseXML(const char* fname){
 	
 	node = root_node->FirstChildElement("GeometryShader");
 	const char* geomSrc = node ? node->GetText() : NULL;
+	if (geomSrc != NULL){ //We are using a geometry shader
+		this->useGeometryShader = true;	
+	}
 	
 	node = root_node->FirstChildElement("FragmentShader");
 	const char* fragSrc = node ? node->GetText() : NULL;
@@ -95,10 +103,12 @@ void ImageFilter::parseXML(const char* fname){
 	//TODO: add type handling
 	while( (node = (TiXmlElement*)node->NextSibling("Parameter")) ){
 		const char* name = node->Attribute("name");
+		float type = atof(node->Attribute("type"));
 		float min = atof(node->Attribute("min"));
 		float max = atof(node->Attribute("max"));
 		float val = atof(node->GetText());
-		parameters[std::string(name)] = new FilterParameter(name, val, min, max);
+		
+		parameters[std::string(name)] = new FilterParameter(name, val, min, max, (int)type );
 	}
 }
 
@@ -140,28 +150,49 @@ GLuint ImageFilter::apply(GLuint inputTexture){
         this->shader->enable();
 
         
-        for(std::map<std::string, FilterParameter*>::const_iterator it = parameters.begin(); it != parameters.end(); ++it)
-    		this->shader->setUniform1f(it->first.c_str(), it->second->value);
+	for(std::map<std::string, FilterParameter*>::const_iterator it = parameters.begin(); it != parameters.end(); ++it){
+    		const char* test = it->first.c_str();
+		float test2 = it->second->value;
+			this->shader->setUniform1f(it->first.c_str(), it->second->value);
+	}
+        
+	if(useGeometryShader){
+			//send n number of threads 
+		int numThreads = (int) parameters["threads"]->value;
+			glBegin(GL_POINTS);
 
-        
-        //glUniform1i(glGetUniformLocation(f->program, "tex"), 0);
-        //glUniform1i(glGetUniformLocation(f->program, "tex1"), 1);
-        
+		//glVertex2d(3,3);
+		int i=0;		   
+		for(i=0; i<numThreads; i++){
+				float x = (float)((i/numThreads ) / (float)numThreads -0.5f) * 2.0f; 
+				float y = (float)((i%numThreads ) / (float)numThreads  -0.5f)* 2.0f;
+				glVertex2d(x,y);
+		}
+			glEnd();
+	}else{
+		//draw full screen quad with input texture aplied
+		glEnable(GL_TEXTURE_2D);
+        glBindTexture(GL_TEXTURE_2D, inputTexture);
+		this->shader->enable();
         glBegin(GL_QUADS);
-        glColor3d(1.0, 1.0, 1.0);
+        glColor3d(1.0, 0.0, 0.0);
         glTexCoord2f(0, 0); glVertex3f(-1, -1, 0); 
         glTexCoord2f(1, 0); glVertex3f(1, -1, 0);  
         glTexCoord2f(1, 1); glVertex3f(1, 1, 0);   
         glTexCoord2f(0, 1); glVertex3f(-1, 1, 0);  
         glEnd();
-    
-        this->shader->disable();
-        
-		glPopMatrix();
-		glMatrixMode(GL_PROJECTION);
-		glPopMatrix();
-		glPopAttrib();
-		glPopAttrib();
+
+	
+	}
+	
+	this->shader->disable();
+	
+	glPopMatrix();
+	glMatrixMode(GL_PROJECTION);
+	glPopMatrix();
+	glPopAttrib();
+	glPopAttrib();
+	
 	
 	glBindFramebufferEXT(GL_FRAMEBUFFER_EXT, 0);  //should maybe have a stack
 			
