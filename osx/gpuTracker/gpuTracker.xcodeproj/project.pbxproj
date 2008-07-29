@@ -36,6 +36,8 @@
 		1238D1120E135BDF003A0A52 /* gauss.xml in Copy Fiters */ = {isa = PBXBuildFile; fileRef = 1238D0B20E135B52003A0A52 /* gauss.xml */; };
 		1238D1130E135BDF003A0A52 /* gaussV.xml in Copy Fiters */ = {isa = PBXBuildFile; fileRef = 1238D0B30E135B52003A0A52 /* gaussV.xml */; };
 		1238D1140E135BDF003A0A52 /* threshold.xml in Copy Fiters */ = {isa = PBXBuildFile; fileRef = 1238D0B40E135B52003A0A52 /* threshold.xml */; };
+		12C6411E0E3FD5AA00591F3D /* blobDetector.xml in Resources */ = {isa = PBXBuildFile; fileRef = 12C6411D0E3FD5AA00591F3D /* blobDetector.xml */; };
+		12C641AC0E3FD68700591F3D /* blobDetector.xml in Copy Fiters */ = {isa = PBXBuildFile; fileRef = 12C6411D0E3FD5AA00591F3D /* blobDetector.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,6 +47,7 @@
 			dstPath = filters;
 			dstSubfolderSpec = 7;
 			files = (
+				12C641AC0E3FD68700591F3D /* blobDetector.xml in Copy Fiters */,
 				122010140E32D2DF00BC7B2F /* blobExtractor.xml in Copy Fiters */,
 				1238D1110E135BDF003A0A52 /* contrast.xml in Copy Fiters */,
 				1238D1120E135BDF003A0A52 /* gauss.xml in Copy Fiters */,
@@ -122,6 +125,7 @@
 		1238D0BA0E135B5F003A0A52 /* minimal.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = minimal.vs; path = ../../shaders/minimal.vs; sourceTree = SOURCE_ROOT; };
 		1238D0BB0E135B5F003A0A52 /* threshold.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = threshold.fs; path = ../../shaders/threshold.fs; sourceTree = SOURCE_ROOT; };
 		1238D0C20E135BCF003A0A52 /* OpenCV.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenCV.framework; sourceTree = SOURCE_ROOT; };
+		12C6411D0E3FD5AA00591F3D /* blobDetector.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = blobDetector.xml; path = ../../filters/blobDetector.xml; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				12200FFC0E32D20D00BC7B2F /* blobExtractor.xml */,
+				12C6411D0E3FD5AA00591F3D /* blobDetector.xml */,
 				1238D0B10E135B52003A0A52 /* contrast.xml */,
 				1238D0B20E135B52003A0A52 /* gauss.xml */,
 				1238D0B30E135B52003A0A52 /* gaussV.xml */,
@@ -268,6 +273,7 @@
 			files = (
 				12200FFD0E32D20D00BC7B2F /* blobExtractor.xml in Resources */,
 				1220104D0E32D38800BC7B2F /* blobExtractor.gs in Resources */,
+				12C6411E0E3FD5AA00591F3D /* blobDetector.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
